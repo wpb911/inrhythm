@@ -27,6 +27,9 @@ app.use(express.json());
 // Static directory
 app.use(express.static("public"));
 
+
+require("./routes/html-routes.js")(app);
+// require("./routes/api-routes.js")(app);
 // Routes
 // =============================================================
 //require("./routes/api-routes.js")(app);
@@ -40,6 +43,6 @@ db.sequelize.sync().then(function() {
     
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
-    console.log(process.env);
+    // console.log(process.env);
   });
 });
