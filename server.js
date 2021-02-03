@@ -29,7 +29,7 @@ app.use(express.static("public"));
 
 
 require("./routes/html-routes.js")(app);
-// require("./routes/api-routes.js")(app);
+require("./routes/api-routes.js")(app);
 // Routes
 // =============================================================
 //require("./routes/api-routes.js")(app);
