@@ -1,9 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Compatibility = sequelize.define("Compatibility", {
-        // userID: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        // },
+    const Compatibility = sequelize.define("Compatibility", {        
         first_name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -29,6 +25,7 @@ module.exports = function(sequelize, DataTypes) {
     Compatibility.associate = (models) => {
         // We're saying that a Biorhythm should belong to a User
         // A Biorhythm can't be created without a User due to the foreign key constraint
+        // Constaint created automatically by this sequelize associate function
         Compatibility.belongsTo(models.User, {
           foreignKey: {
             allowNull: false,
