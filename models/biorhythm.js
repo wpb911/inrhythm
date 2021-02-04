@@ -1,11 +1,36 @@
 
 module.exports = function(sequelize, DataTypes) {
-    var Biorhythm = sequelize.define("biorhythm", {
-        userID: DataTypes.INTEGER,
-        physical: DataTypes.STRING,
-        emotional: DataTypes.STRING,
-        intellectual: DataTypes.STRING,
+    const Biorhythm = sequelize.define("Biorhythm", {
+        physical:  {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        emotional: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        intellectual: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
     });
+
+
+    Biorhythm.associate = (models) => {
+        // We're saying that a Biorhythm should belong to a User
+        // A Biorhythm can't be created without a User due to the foreign key constraint
+        Biorhythm.belongsTo(models.User, {
+          foreignKey: {
+            allowNull: false,
+          },
+        });
+      };
+
+
+
+
+
     return Biorhythm;
   };
+
 
