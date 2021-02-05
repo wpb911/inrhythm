@@ -10,18 +10,5 @@ module.exports = function(app){
     db.biorhythm.findAll({}).then((answer) =>res.json(answer))
   });
 
-
-
 }
 
-// {
-//   physical:1;
-//   emotional:2;
-//   intellectual:3
-// }
-
-// {
-//   "physical":"1",
-//   "emotional":"2",
-//   "intellectual":"3"
-// }
