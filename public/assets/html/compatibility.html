@@ -32,11 +32,11 @@
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
             <li class="nav-item active">
-                <a class="nav-link active" href="./results.html">Results</a>
+                <a class="nav-link option" href="./results.html">Results</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link option" href="./compatibility.html" id="compatibility">Compatibility</a>
+                <a class="nav-link active" href="./compatibility.html" id="compatibility">Compatibility</a>
             </li>
 
             <li class="nav-item">
@@ -47,15 +47,44 @@
     </nav>
 
     <main class="d-flex flex-column h-100 flex-shrink-0">
-      <div class="container-fluid">
+        <section class="container-fluid" id="charts">
+          <div class="row">
               
-          <section class="row mx-auto">
-              <br>
-                  <canvas id="myChart" width="1000" height="500"></canvas>
-              <br>
-            </section>
-  
-          <br><br>
+    
+            <div class="col-lg-3 col-md-3 mx-auto text-center" id="aside">
+                <div class="form justify-content-center">
+                    <br>
+                    <label for="partnerFirst" class="form-label"><small>Partner's First Name:</small></label>
+                    <input type="text" class="form-control-sm compat" id="compatFirstName" placeholder="John">
+                
+                    <label for="partnerLast" class="form-label"><small>Partner's Last Name:</small></label>
+                    <input type="text" class="form-control-sm compat" id="compatLastName" placeholder="Doe">
+                  </div>
+
+                  <label for="birthday" class="form-label"><small>Partner's birthday:</small></label>
+                  <input type="date" class="form-control-sm" id="compatBirthday">
+            <button type="submit" class="btn btn-sm" id="btn-compat">Check Compatibility</button>
+
+            <div class="list-group list-group-flush">
+                <small>
+                <a href="#" class="list-group-item list-group-item active bg-transparent">
+                  Michael Rich
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent">Jessica Horvath</a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent">John Doe</a>
+            </small>  
+            </div>
+
+          </div>
+    
+            <div class="mx-auto col-lg-9 col-md-9">
+                <br>
+                    <canvas id="myChart" width="1000" height="500"></canvas>
+                <br>
+                <div class="col-12">
+                  </div>
+              </section>
+
 
 
         <section class="row mx-auto">
