@@ -1,0 +1,123 @@
+body {
+    background-color: #242423;
+    flex-grow: 1
+}
+
+main {
+    height: 100%;
+}
+
+.body-sign {
+    background-color: #242423;
+    background-image: url("../img/curves-03.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: contain;
+  }
+
+img {
+    max-width: 50%;
+    max-height: auto;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+#a-signin {
+    color:  #34788d;
+    font-weight: bold;
+}
+
+#a-signin:hover {
+    color: #8ac63f;
+}
+
+.jumbo-form {
+    max-width: 75%;
+    background-color: white;
+}
+
+input {
+    margin-bottom: 30px;
+}
+
+label {
+    padding-right: 8px;
+}
+
+#btn-signup {
+    background-color: #c3462e;
+    color: white;
+}
+
+#btn-signup:hover {
+    background-color: #797a9e;
+    color: white;
+}
+
+#btn-signin {
+    background-color: #c3462e;;
+    color: white;
+}
+
+#btn-signin:hover {
+    background-color: #797a9e;
+    color: white;
+}
+
+#welcome {
+    font-size: 30px;
+    align-items: center;
+    /* color:#797a9e; */
+    padding-bottom: 8px;
+}
+
+.navbar-brand {
+    vertical-align: top;
+}
+
+.nav-link.option {
+    color: lightgray !important;
+}
+
+nav .navbar-nav li a:hover{
+    color: #c9ad54 !important;
+}
+
+.nav-link.active {
+    color: #c9ad54 !important;
+    font-weight: bold !important;
+    }
+
+#about {
+    background-color: white;
+}
+
+#card-physical {
+    background-color: #34788d !important;
+    border-width: 5px;
+}
+
+#card-emotional {
+    background-color: #797a9e !important;
+    border-width: 5px;
+}
+
+#card-intellectual {
+    background-color: #c3462e !important;
+    border-width: 5px;
+}
+
+.card {
+    color: white;
+}
+
+#footer-img {
+    max-width: 200px;
+    height: auto;
+}
+
+#copyright {
+    color: white;
+}
