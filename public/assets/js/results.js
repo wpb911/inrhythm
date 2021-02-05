@@ -1,5 +1,6 @@
 //  labels along the x-axis
 var years = ['Today', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'];
+// const Chart = require("chart")
 
 // For drawing the lines
 var physical = [0.24, 0.17, -0.55, 0.84, -0.98, 0.98, 0.71];
