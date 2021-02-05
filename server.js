@@ -1,9 +1,5 @@
 // starter code
 
-
-// Requiring our models for syncing
-var db = require("./models");
-
 // *****************************************************************************
 // Server.js - This file is the initial starting point for the Node/Express server.
 //
