@@ -23,17 +23,25 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         }, 
+        birth_date:  {
+            type: DataTypes.DATEONLY,
+            allowNull: false,
+        },
+        bio_date:  {
+            type: DataTypes.DATEONLY,
+            allowNull: false,
+        }, 
         day:  {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         month:  {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         year:  {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
     });
 
