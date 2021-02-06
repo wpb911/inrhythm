@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container">
             <a class="navbar-brand d-inline-block mr-1" href="#">
                 <img src="../img/inrhythm-color-nav.png" class="align-center" alt="inRHYTHM">
@@ -44,7 +44,15 @@
                   </div>
 
                   <label for="birthday" class="form-label"><small>Partner's birthday:</small></label>
-                  <input type="date" class="form-control-sm" id="compatBirthday">
+                  <div class="input-group mx-auto text-center">
+                      <div class="input-group-prepend">
+                          <input type="number" aria-label="month" id="compat-month" class="form-control form-control-sm" placeholder="MM">
+                          <input type="number" aria-label="day" id="compat-day" class="form-control form-control-sm" placeholder="DD">
+                          <input type="number" aria-label="year" id="compat-year" class="form-control form-control-sm" placeholder="YYYY">
+
+
+                      </div>
+                  </div>
             <button type="submit" class="btn btn-sm" id="btn-compat">Check Compatibility</button>
 
             <div class="list-group list-group-flush">
@@ -100,6 +108,22 @@
         </div>
     </section>
 </main>
+
+
+
+<div class="footer">
+    <footer id="sticky-footer" class="footer mt-auto py-3 bg-transparent">
+        <div class="container text-center justify-content-center">
+            <img src="../img/inrhythm-color-nav.png" class="align-center" id="footer-img" alt="inRHYTHM">
+
+            <br>   
+              <small id="copyright">Copyright &copy; William Byrd, Jacci Horvath, Kehong Li, Esteban Meza & Matt Trader </small>
+        </div>
+      </footer>
+      </div>
+        
+
+    <script src="../js/results.js"></script>
 
 
 
