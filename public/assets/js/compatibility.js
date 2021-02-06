@@ -17,9 +17,9 @@ $(document).ready(function() {
            dayInput,
        } ;
 
-       searchCompat();
+       postCompat();
 
-       function searchCompat(first_name, last_name, day, month, year) {
+       function postCompat(first_name, last_name, day, month, year) {
         $.post("/api/login", {
             first_name:first_name,
             last_name:last_name,
