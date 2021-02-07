@@ -3,7 +3,7 @@ const passport = require("passport")
 
 module.exports = function(app){
 
-  app.post('/api/login',(req,res)=>{
+  app.post('/api/signup',(req,res)=>{
     db.User.create({
       first_name:req.body.first_name,
       last_name:req.body.last_name,
@@ -12,7 +12,20 @@ module.exports = function(app){
       day:req.body.day,
       month:req.body.month,
       year:req.body.year
-    }).then((answer) =>res.json(answer))
+    }).then(function() {
+      res.redirect(307, "/api/login");
+    })
+    .catch(function(err) {
+      res.status(401).json(err);
+    });
+});
+  //   .then((answer) =>res.json(answer))
+  // });
+
+  app.post("/api/login", passport.authenticate("local"), function(req, res) {
+    res.redirect(307,"/results")
+    // res.json(req.user);
+    // res.json(req.user);
   });
 
   app.get('/api/user',(req,res)=>{

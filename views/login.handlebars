@@ -1,42 +1,43 @@
 <body class="body-sign">
 
-    <div class="container-fluid">
-            
-        <div class="row">
-            <img src="./assets/img/inrhythm-color-02.png" alt="inRHYTHM logo" class="mx-auto"><br>
+  <div class="container-fluid">
+
+    <div class="row">
+      <img src="./assets/img/inrhythm-color-02.png" alt="inRHYTHM logo" class="mx-auto"><br>
+    </div>
+
+    <div class="row">
+      <div class="jumbotron shadow mx-auto jumbo-form">
+
+        <form id = "signin" class="row g-2">
+          <div class="col-12">
+            <h1 class="display-4 text-center" id="welcome">Welcome back!</h1>
+          </div>
+
+          <div class="col-12">
+            <input type="email" class="form-control form-input" id="loginEmail" placeholder="Email">
+          </div>
+
+          <div class="col-12">
+            <input type="password" class="form-control form-input" id="loginPassword" placeholder="Password">
+          </div>
+
+        <div class="col-12 text-center">
+          <button type="submit" class="btn" id="btn-signin"> Sign In</button>
         </div>
 
-            <div class="row">
-                <div class="jumbotron shadow mx-auto jumbo-form">
-                    
-                    <form class="row g-2">
-                        <div class="col-12">
-                            <h1 class="display-4 text-center" id="welcome">Welcome back!</h1>
-                        </div>
+        </form>
 
-                        <div class="col-12">
-                          <input type="email" class="form-control form-input" id="loginEmail" placeholder="Email">
-                        </div>
 
-                        <div class="col-12">
-                          <input type="password" class="form-control form-input" id="loginPassword" placeholder="Password">
-                        </div>
-                        
+        <div class="d-flex justify-content-center align-items-center links">
+          <p><small>New to inRHYTHM? <a href="/" id="a-signin"> Sign Up</a></p></small>
 
-                      </form>
+        </div>
 
-                      <div class="col-12 text-center">
-                        <button type="submit" class="btn" id="btn-signin">Sign In</button>
-                      </div>
-
-                      <div class="d-flex justify-content-center align-items-center links">
-                        <p><small>New to inRHYTHM? <a href="/" id="a-signin"> Sign Up</a></p></small>
-                    
-                    </div>
-                    
-                </div>
-            </div>
+      </div>
     </div>
-        
-    
+  </div>
+
+  <script src="./assets/js/login.js"></script>
+
 </body>

@@ -16,13 +16,13 @@ module.exports = function (app) {
     res.render('login')
   });
   
-  app.get('/result',function(req,res){
+  app.get('/results',function(req,res){
     res.render('results')
   });
 
-  app.get('/result',function(req,res){
-    res.json('resultPage')
-  });
+  // app.get('/result',function(req,res){
+  //   res.json('resultPage')
+  // });
 
 
 
