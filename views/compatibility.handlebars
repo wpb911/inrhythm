@@ -56,13 +56,26 @@
             <button type="submit" class="btn btn-sm" id="btn-compat">Check Compatibility</button>
 
             <div class="list-group list-group-flush">
-                <small>
+              <!-- For loop -->
+              <ul>
+                {{#each history}}
+                  <li>
+                   <a href="/posts/{{../permalink}}#{{history}}">{{this.compatFirstName + this.compatLastName}}</a>
+                  </li>
+                     {{> history}}
+                  
+                {{/each}}
+              </ul>
+
+
+             <!--   <small>
                 <a href="#" class="list-group-item list-group-item active bg-transparent">
                   Michael Rich
                 </a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent">Jessica Horvath</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent">John Doe</a>
-            </small>  
+            </small> 
+              !-->
             </div>
 
           </div>
