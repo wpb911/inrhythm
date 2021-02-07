@@ -58,11 +58,11 @@
             <div class="list-group list-group-flush">
               <!-- For loop -->
               <ul>
-                {{#each history}}
+                {{#each compatibility}}
                   <li>
-                   <a href="/posts/{{../permalink}}#{{history}}">{{this.compatFirstName + this.compatLastName}}</a>
+                   <a href="/posts/{{../permalink}}#{{compatibility}}">{{this.compatFirstName + this.compatLastName}}</a>
                   </li>
-                     {{> history}}
+                     {{> compatibility}}
                   
                 {{/each}}
               </ul>
