@@ -13,11 +13,11 @@ module.exports = function (app) {
   });
 
   app.get('/login',function(req,res){
-    res.json('loginPage')
+    res.render('login')
   });
   
-  app.get('/test',function(req,res){
-    res.json('testPage')
+  app.get('/result',function(req,res){
+    res.render('results')
   });
 
   app.get('/result',function(req,res){

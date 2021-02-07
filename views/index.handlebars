@@ -3,13 +3,13 @@
     <div class="container-fluid">
             
         <div class="row">
-            <img src="../img/inrhythm-color-02.png" alt="inRHYTHM logo" class="mx-auto"><br>
+            <img src="./assets/img/inrhythm-color-02.png" alt="inRHYTHM logo" class="mx-auto"><br>
         </div>
 
             <div class="row">
                 <div class="jumbotron shadow mx-auto jumbo-form">
                     
-                    <form class="row g-2">
+                    <form id = "signup" class="row g-2">
                         <div class="col-md-6">
                           <input type="text" class="form-control form-input" id="firstName" placeholder="First Name">
                         </div>
@@ -42,19 +42,20 @@
                           <input type="number" class="form-control form-input" id="year" placeholder="YYYY">
                         </div>
                         
-                      </form>
-
                       <div class="col-12 text-center">
                         <button type="submit" class="btn" id="btn-signup">Sign Up</button>
                       </div>
+                      </form>
+
 
                       <div class="d-flex justify-content-center align-items-center links">
-                        <p><small>Already have an account? <a href="./login.html" id="a-signin"> Sign In</a></p></small>
+                        <p><small>Already have an account? <a href="/login" id="a-signin"> Sign In</a></p></small>
                     
                     </div>
                 </div>
             </div>
     </div>
         
-    
+    <script src="./assets/js/signup.js"></script>
+        
 </body>
