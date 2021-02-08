@@ -23,7 +23,7 @@ module.exports = function(app){
   // });
 
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
-    res.redirect(307,"/results")
+    res.redirect(303,"/results")
     // res.json(req.user);
     // res.json(req.user);
   });
