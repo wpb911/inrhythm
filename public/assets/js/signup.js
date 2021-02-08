@@ -14,9 +14,9 @@ $(document).ready(function(){
       last_name: lastNameInput.val().trim(),
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
-      day:1,
-      month:2,
-      year:3
+      day:dayInput.val().trim(),
+      month:monthInput.val().trim(),
+      year:yearInput.val().trim()
     };
 
     loginUser(userData.first_name,
@@ -27,7 +27,7 @@ $(document).ready(function(){
   });
 
   function loginUser(first_name,last_name,email,password,day,month,year){
-    $.post("/api/login",{
+    $.post("/api/signup",{
       first_name:first_name,
       last_name:last_name,
       email:email,
