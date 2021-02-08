@@ -1,7 +1,7 @@
  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container">
             <a class="navbar-brand d-inline-block mr-1" href="#">
-                <img src="../img/inrhythm-color-nav.png" class="align-center" alt="inRHYTHM">
+                <img src="./assets/img/inrhythm-color-nav.png" class="align-center" alt="inRHYTHM">
             </a>
         </div>
         
@@ -58,13 +58,13 @@
             <div class="list-group list-group-flush">
               <!-- For loop -->
               <ul>
-                {{#each compatibility}}
+                {{!-- {{#each compatibility}}
                   <li>
                    <a href="/posts/{{../permalink}}#{{compatibility}}">{{this.compatFirstName + this.compatLastName}}</a>
                   </li>
                      {{> compatibility}}
                   
-                {{/each}}
+                {{/each}} --}}
               </ul>
 
 
@@ -127,7 +127,7 @@
 <div class="footer">
     <footer id="sticky-footer" class="footer mt-auto py-3 bg-transparent">
         <div class="container text-center justify-content-center">
-            <img src="../img/inrhythm-color-nav.png" class="align-center" id="footer-img" alt="inRHYTHM">
+            <img src="./assets/img/inrhythm-color-nav.png" class="align-center" id="footer-img" alt="inRHYTHM">
 
             <br>   
               <small id="copyright">Copyright &copy; William Byrd, Jacci Horvath, Kehong Li, Esteban Meza & Matt Trader </small>
@@ -136,11 +136,7 @@
       </div>
         
 
-    <script src="../js/results.js"></script>
-
-
-
-<div class="footer">
+{{!-- <div class="footer">
     <footer id="sticky-footer" class="footer mt-auto py-3 bg-transparent">
         <div class="container text-center justify-content-center">
             <img src="../img/inrhythm-color-nav.png" class="align-center" id="footer-img" alt="inRHYTHM">
@@ -149,7 +145,7 @@
               <small id="copyright">Copyright &copy; William Byrd, Jacci Horvath, Kehong Li, Esteban Meza & Matt Trader </small>
         </div>
       </footer>
-      </div>
+      </div> --}}
         
 
-    <script src="../js/results.js"></script>
+    <script src="./assets/js/compatibility.js"></script>
