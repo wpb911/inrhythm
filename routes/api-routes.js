@@ -28,6 +28,12 @@ module.exports = function(app){
     // res.json(req.user);
   });
 
+  app.get("/logout",function(req,res){
+    req.logout();
+    console.log("logging out");
+    res.redirect("/login")
+  })
+
   app.get('/api/user',(req,res)=>{
     db.user.findAll({}).then((answer) =>res.json(answer))
   });

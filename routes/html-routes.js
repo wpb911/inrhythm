@@ -21,6 +21,9 @@ module.exports = function (app) {
     res.render('results')
   });
 
+  app.get('/compatibility',function(req,res){
+    res.render('compatibility')
+  })
   // app.post('/results',isAuthenticated,function(req,res){
   //   res.render('results')
   // });
