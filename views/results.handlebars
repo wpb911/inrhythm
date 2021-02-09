@@ -17,9 +17,9 @@
                 <a class="nav-link active" href="/results">Results</a>
             </li>
 
-            <li class="nav-item">
+            {{!-- <li class="nav-item">
                 <a class="nav-link option" href="/compatibility" id="compatibility">Compatibility</a>
-            </li>
+            </li> --}}
 
             <li class="nav-item">
                 <a class="nav-link option" href="/logout">Logout</a>
@@ -28,7 +28,7 @@
         </div>
     </nav>
 
-    <main class="d-flex flex-column h-100 flex-shrink-0">
+    <main class="d-flex flex-column h-100 flex-fill">
       <div class="container-fluid">
               
           <section class="row mx-auto">
@@ -45,7 +45,9 @@
               <div class="card bg-transparent" id="card-physical">
                 <div class="card-body">
                   <h5 class="card-title text-center lead">Physical</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text">
+                    The physical biorhythm is a 23-day cycle related to physical strength, durability, resistance, stamina and courage. When your physical curve is near zero, you are approaching a critical day and should feel a drastic shift in energy. Avoid partaking in any strenuous physical activities during this time.
+                  </p>
                 </div>
               </div>
             </div>
@@ -54,7 +56,9 @@
               <div class="card bg-transparent" id="card-emotional">
                 <div class="card-body">
                   <h5 class="lead card-title text-center">Emotional</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text">
+                    The emotional biorhythm is a 28-day cycle related to emotional stability, feeling, intuition, mood, susceptibility and creativity. When your emotional curve is near zero, you are approaching a critical day and may be prone to mood swings and intense feelings. Avoid making any rash decisions during this time.
+                  </p>
                 </div>
               </div>
             </div>
@@ -63,11 +67,14 @@
                 <div class="card bg-transparent" id="card-intellectual">
                   <div class="card-body">
                     <h5 class="card-title text-center lead">Intellectual</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text">
+                      The intellectual biorhythm is a 33-day cycle related to thinking, analyzing, judgment, concentration and composition. When your intellectual curve is near zero, you are approaching a critical day and may feel easily challenged by mundane tasks. Avoid taking on any complex projects during this time.
+                    </p>
                   </div>
                 </div>
             </div>
 
+        </div>
         </div>
     </section>
 </main>
@@ -82,8 +89,7 @@
             <br>   
               <small id="copyright">Copyright &copy; William Byrd, Jacci Horvath, Kehong Li, Esteban Meza & Matt Trader </small>
         </div>
-      </footer>
-      </div>
+    </footer>
+</div>
         
-
     <script src="./assets/js/results.js"></script>

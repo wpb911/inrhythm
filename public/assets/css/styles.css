@@ -1,6 +1,10 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     background-color: #242423;
-    flex-grow: 1
 }
 
 main {
@@ -15,6 +19,7 @@ main {
     background-attachment: fixed;
     background-size: contain;
   }
+
 
 img {
     max-width: 50%;
@@ -151,4 +156,8 @@ nav .navbar-nav li a:hover{
 .list-group-item.active {
     color: #8ac63f !important;
     border-color: #8ac63f !important;
+}
+
+.footer {
+    padding-top: 50px;
 }
