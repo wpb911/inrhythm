@@ -19,6 +19,7 @@ $(document).ready(function() {
     passwordInput.val("");
 
     function loginUser(email,password){
+      // 1) make a call to auth user
       $.post("/api/login",{
         email:email,
         password:password

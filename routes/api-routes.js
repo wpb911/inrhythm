@@ -23,8 +23,9 @@ module.exports = function(app){
   // });
 
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
-    res.redirect(303,"/results")
     // res.json(req.user);
+    // 2) user is auth - added "user" property to req obj
+    res.redirect(303, "/results")
     // res.json(req.user);
   });
 
@@ -35,8 +36,20 @@ module.exports = function(app){
   })
 
   app.get('/api/user',(req,res)=>{
+    // 4) call sqlze get that user data
+    // req.user.email
     db.user.findAll({}).then((answer) =>res.json(answer))
   });
+
+  app.get('/api/user_data',(req,res)=>{
+    console.log(req.user);
+    res.json(req.user);
+    // db.user.findAll({where:{
+    //   email:req.user.email
+    // }}).then((userData)=>{
+    //   res.json(userData)
+    // });
+  })
 
   app.post('/api/compat',(req,res)=>{
     db.compatibility.create(req.body).then((answer) =>res.json(answer))
