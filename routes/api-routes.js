@@ -13,7 +13,8 @@ module.exports = function(app){
       month:req.body.month,
       year:req.body.year
     }).then(function() {
-      res.redirect(307, "/api/login");
+      // res.redirect(307, "/login");
+      res.redirect(303, "/login");
     })
     .catch(function(err) {
       res.status(401).json(err);

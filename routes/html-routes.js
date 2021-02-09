@@ -24,14 +24,9 @@ module.exports = function (app) {
   app.get('/compatibility',function(req,res){
     res.render('compatibility')
   })
-  // app.post('/results',isAuthenticated,function(req,res){
-  //   res.render('results')
-  // });
 
-  // app.get('/result',function(req,res){
-  //   res.json('resultPage')
-  // });
-
-
+  app.get('*', function(req, res){
+    res.send('Page not found', 404);
+  });
 
 }
