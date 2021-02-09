@@ -19,19 +19,37 @@ $(document).ready(function(){
     
     //let phyPrt = phyCalc(bdateFromForm, 7, 74, 91, -28 );
     
-    var years = ['Today', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'];
+    var years = ['Today', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 2', 'Day 3', 'Day 4'];
     
     // let readdate = "17.01.1964"
     // let bdateFromForm = moment(readdate, "DD.MM.YYYY");
     
     // For drawing the lines
-    var physical = phyCalc(bdateFromForm, 30, 74, 91, -28);
+    var physical = 
+      ['-94', '-100', '-98', '-89', '-73', '-52',
+      '-27',   '-0',  '27',  '52',  '73',  '89',
+       '98',  '100',  '94',  '82',  '63',  '40',
+       '14',  '-14', '-40', '-63', '-82', '-94',
+     '-100',  '-98', '-89', '-73'];
+      //phyCalc(bdateFromForm, 30, 74, 91, -28);
     console.log(`Physical: ${physical}`);
     //[0.24, 0.17, -0.55, 0.84, -0.98, 0.98, 0.71];
-    var emotional = emoCalc(bdateFromForm, 30, 74, 91, -28);
+    var emotional = 
+      ['-43', '-62', '-78', '-90', '-97', '-100',
+      '-97', '-90', '-78', '-62', '-43', '-22',
+      '-0', '22', '43', '62', '78', '90',
+      '97', '100', '97', '90', '78', '62',
+      '43', '22', '-0', '-22'];
+      //emoCalc(bdateFromForm, 30, 74, 91, -28);
     console.log(`Emotional: ${emotional}`);
     //[0.97, -0.38, -0.49, 0.98, -0.73, -0.08, 0.84];
-    var intellectual = intCalc(bdateFromForm, 30, 74, 91, -28);
+    var intellectual = 
+      ['100', '99', '95', '87', '76', '62',
+      '46', '28', '10', '-10', '-28', '-46',
+      '-62', '-76', '-87', '-95', '-99', '-100',
+      '-97', '-91', '-81', '-69', '-54', '-37',
+      '-19', '0', '19', '37'];
+      //intCalc(bdateFromForm, 30, 74, 91, -28);
     console.log(`Intellectual: ${intellectual}`);
     //[-0.44, -0.71, 0.90, 0.13, -0.98, 0.51, 0.63];
     
@@ -69,8 +87,8 @@ $(document).ready(function(){
         scales: {
           yAxes: [{
             ticks: {
-              min: -1,
-              max: 1
+              min: -100,
+              max: 100
             },
             gridLines: {
               color: '#6d6e71',
@@ -168,122 +186,122 @@ $(document).ready(function(){
     
     })
     
-    function phyCalc(bdate, daysToShow, pPercent, ePercent, iPercent) {
+    // function phyCalc(bdate, daysToShow, pPercent, ePercent, iPercent) {
     
-      let birthDate = moment(bdate, "DD.MM.YYYY");
-      let todayDate = moment(moment(), "DD.MM.YYYY");
+    //   let birthDate = moment(bdate, "DD.MM.YYYY");
+    //   let todayDate = moment(moment(), "DD.MM.YYYY");
     
-      let bday = moment(birthDate).format(" MM.DD.YYYY");
-      let tday = moment(todayDate).format(" MM.DD.YYYY")
+    //   let bday = moment(birthDate).format(" MM.DD.YYYY");
+    //   let tday = moment(todayDate).format(" MM.DD.YYYY")
     
-      let totaldaysalive = todayDate.diff(birthDate, 'days');
+    //   let totaldaysalive = todayDate.diff(birthDate, 'days');
     
-      console.log(`birthdate:${bday} todayDate:${tday} TDA:${totaldaysalive}`);
+    //   console.log(`birthdate:${bday} todayDate:${tday} TDA:${totaldaysalive}`);
     
-      let phy = [];
-      let emo = [];
-      let int = [];
+    //   let phy = [];
+    //   let emo = [];
+    //   let int = [];
     
-      let physical = Math.sin((2 * Math.PI * totaldaysalive) / 23);
-      let emotional = Math.sin((2 * Math.PI * totaldaysalive) / 28);
-      let intellectual = Math.sin((2 * Math.PI * totaldaysalive) / 33);
+    //   let physical = Math.sin((2 * Math.PI * totaldaysalive) / 23);
+    //   let emotional = Math.sin((2 * Math.PI * totaldaysalive) / 28);
+    //   let intellectual = Math.sin((2 * Math.PI * totaldaysalive) / 33);
     
-      //(pPercent <= physical+1) && (ePercent <= emotional+1)&& (iPercent <= intellectual+1)
-      if (true) {
+    //   //(pPercent <= physical+1) && (ePercent <= emotional+1)&& (iPercent <= intellectual+1)
+    //   if (true) {
     
-        for (let i = 0; i < daysToShow; i++) {
-          physical = Math.sin((2 * Math.PI * totaldaysalive + i) / 23);
-          emotional = Math.sin((2 * Math.PI * totaldaysalive + i) / 28);
-          intellectual = Math.sin((2 * Math.PI * totaldaysalive + i) / 33);
+    //     for (let i = 0; i < daysToShow; i++) {
+    //       physical = Math.sin((2 * Math.PI * totaldaysalive + i) / 23);
+    //       emotional = Math.sin((2 * Math.PI * totaldaysalive + i) / 28);
+    //       intellectual = Math.sin((2 * Math.PI * totaldaysalive + i) / 33);
     
-          console.log(`Day${i} (${moment().add(i, 'days').format("MM.DD.YYYY")}) - physical: ${physical.toFixed()} emotional: ${emotional.toFixed()} intellectual: ${intellectual.toFixed()} TDA : ${totaldaysalive + i}`)
-          phy[i] = physical.toFixed(2);
-          //console.log(`phy${i}:${phy[i]}`);
-          emo[i] = emotional.toFixed(2);
-          int[i] = intellectual.toFixed(2);
+    //       console.log(`Day${i} (${moment().add(i, 'days').format("MM.DD.YYYY")}) - physical: ${physical.toFixed()} emotional: ${emotional.toFixed()} intellectual: ${intellectual.toFixed()} TDA : ${totaldaysalive + i}`)
+    //       phy[i] = physical.toFixed(2);
+    //       //console.log(`phy${i}:${phy[i]}`);
+    //       emo[i] = emotional.toFixed(2);
+    //       int[i] = intellectual.toFixed(2);
     
-        }
-        return phy;
+    //     }
+    //     return phy;
     
-      } else {
-        console.log(" bad biorhythm input");
-      }
+    //   } else {
+    //     console.log(" bad biorhythm input");
+    //   }
     
-    }
+    // }
     
-    function emoCalc(bdate, daysToShow, pPercent, ePercent, iPercent) {
+    // function emoCalc(bdate, daysToShow, pPercent, ePercent, iPercent) {
     
-      let birthDate = moment(bdate, "DD.MM.YYYY");
-      let todayDate = moment(moment(), "DD.MM.YYYY");
+    //   let birthDate = moment(bdate, "DD.MM.YYYY");
+    //   let todayDate = moment(moment(), "DD.MM.YYYY");
     
-      let bday = moment(birthDate).format(" MM.DD.YYYY");
-      let tday = moment(todayDate).format(" MM.DD.YYYY")
+    //   let bday = moment(birthDate).format(" MM.DD.YYYY");
+    //   let tday = moment(todayDate).format(" MM.DD.YYYY")
     
-      let totaldaysalive = todayDate.diff(birthDate, 'days');
+    //   let totaldaysalive = todayDate.diff(birthDate, 'days');
     
-      //console.log(`birthdate:${bday} todayDate:${tday} TDA:${totaldaysalive}`);
+    //   //console.log(`birthdate:${bday} todayDate:${tday} TDA:${totaldaysalive}`);
     
-      let phy = [];
-      let emo = [];
-      let int = [];
+    //   let phy = [];
+    //   let emo = [];
+    //   let int = [];
     
-      if (true) {
-        //(pPercent <= physical+1) && (ePercent <= emotional+1)&& (iPercent <= intellectual+1)
-        for (let i = 0; i < daysToShow; i++) {
-          let physical = Math.sin((2 * Math.PI * totaldaysalive + i) / 23);
-          let emotional = Math.sin((2 * Math.PI * totaldaysalive + i) / 28);
-          let intellectual = Math.sin((2 * Math.PI * totaldaysalive + i) / 33);
+    //   if (true) {
+    //     //(pPercent <= physical+1) && (ePercent <= emotional+1)&& (iPercent <= intellectual+1)
+    //     for (let i = 0; i < daysToShow; i++) {
+    //       let physical = Math.sin((2 * Math.PI * totaldaysalive + i) / 23);
+    //       let emotional = Math.sin((2 * Math.PI * totaldaysalive + i) / 28);
+    //       let intellectual = Math.sin((2 * Math.PI * totaldaysalive + i) / 33);
     
-          //console.log(`Day${i} (${moment().add(i,'days').format("MM.DD.YYYY")}) - physical: ${physical.toFixed()} emotional: ${emotional.toFixed()} intellectual: ${intellectual.toFixed()} TDA : ${totaldaysalive + i}`)
-          phy[i] = physical.toFixed(2);
-          //console.log(`phy${i}:${phy[i]}`);
-          emo[i] = emotional.toFixed(2);
-          int[i] = intellectual.toFixed(2);
-    
-    
-    
-        }
-        return emo;
-    
-      } else {
-        console.log(" bad biorhythm input");
-      }
-    
-    }
-    
-    function intCalc(bdate, daysToShow, pPercent, ePercent, iPercent) {
-    
-      let birthDate = moment(bdate, "DD.MM.YYYY");
-      let todayDate = moment(moment(), "DD.MM.YYYY");
-    
-      let bday = moment(birthDate).format(" MM.DD.YYYY");
-      let tday = moment(todayDate).format(" MM.DD.YYYY")
-    
-      let totaldaysalive = todayDate.diff(birthDate, 'days');
-    
-      //console.log(`birthdate:${bday} todayDate:${tday} TDA:${totaldaysalive}`);
-    
-      let phy = [];
-      let emo = [];
-      let int = [];
-    
-      for (let i = 0; i < daysToShow; i++) {
-        let physical = Math.sin((2 * Math.PI * totaldaysalive + i) / 23);
-        let emotional = Math.sin((2 * Math.PI * totaldaysalive + i) / 28);
-        let intellectual = Math.sin((2 * Math.PI * totaldaysalive + i) / 33);
-    
-        //console.log(`Day${i} (${moment().add(i,'days').format("MM.DD.YYYY")}) - physical: ${physical.toFixed()} emotional: ${emotional.toFixed()} intellectual: ${intellectual.toFixed()} TDA : ${totaldaysalive + i}`)
-        phy[i] = physical.toFixed(2);
-        //console.log(`phy${i}:${phy[i]}`);
-        emo[i] = emotional.toFixed(2);
-        int[i] = intellectual.toFixed(2);
+    //       //console.log(`Day${i} (${moment().add(i,'days').format("MM.DD.YYYY")}) - physical: ${physical.toFixed()} emotional: ${emotional.toFixed()} intellectual: ${intellectual.toFixed()} TDA : ${totaldaysalive + i}`)
+    //       phy[i] = physical.toFixed(2);
+    //       //console.log(`phy${i}:${phy[i]}`);
+    //       emo[i] = emotional.toFixed(2);
+    //       int[i] = intellectual.toFixed(2);
     
     
     
-      }
-      return int;
+    //     }
+    //     return emo;
     
-    }
+    //   } else {
+    //     console.log(" bad biorhythm input");
+    //   }
+    
+    // }
+    
+    // function intCalc(bdate, daysToShow, pPercent, ePercent, iPercent) {
+    
+    //   let birthDate = moment(bdate, "DD.MM.YYYY");
+    //   let todayDate = moment(moment(), "DD.MM.YYYY");
+    
+    //   let bday = moment(birthDate).format(" MM.DD.YYYY");
+    //   let tday = moment(todayDate).format(" MM.DD.YYYY")
+    
+    //   let totaldaysalive = todayDate.diff(birthDate, 'days');
+    
+    //   //console.log(`birthdate:${bday} todayDate:${tday} TDA:${totaldaysalive}`);
+    
+    //   let phy = [];
+    //   let emo = [];
+    //   let int = [];
+    
+    //   for (let i = 0; i < daysToShow; i++) {
+    //     let physical = Math.sin((2 * Math.PI * totaldaysalive + i) / 23);
+    //     let emotional = Math.sin((2 * Math.PI * totaldaysalive + i) / 28);
+    //     let intellectual = Math.sin((2 * Math.PI * totaldaysalive + i) / 33);
+    
+    //     //console.log(`Day${i} (${moment().add(i,'days').format("MM.DD.YYYY")}) - physical: ${physical.toFixed()} emotional: ${emotional.toFixed()} intellectual: ${intellectual.toFixed()} TDA : ${totaldaysalive + i}`)
+    //     phy[i] = physical.toFixed(2);
+    //     //console.log(`phy${i}:${phy[i]}`);
+    //     emo[i] = emotional.toFixed(2);
+    //     int[i] = intellectual.toFixed(2);
+    
+    
+    
+    //   }
+    //   return int;
+    
+    // }
   
   });
 
