@@ -25,8 +25,4 @@ module.exports = function (app) {
     res.render('compatibility')
   })
 
-  app.get('*', function(req, res){
-    res.send('Page not found', 404);
-  });
-
 }
