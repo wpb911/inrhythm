@@ -46,9 +46,13 @@ require("./routes/api-routes.js")(app);
 // remove {force: true} after testing and before real data if data is static
 // all test users will be removed after restarting program - currently removed
 
-db.sequelize.sync().then(function() {
-    
-  app.listen(PORT, function() {
+app.get('*', function (req, res) {
+  res.send('Page not found', 404);
+});
+
+db.sequelize.sync().then(function () {
+
+  app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
     // console.log(process.env);
   });

@@ -37,8 +37,10 @@ $(document).ready(function(){
       year:year
     }).then(function(){
       // window.location.reload();
-      console.log("1111")
-      console.log(month)
+      // console.log("1111")
+      // console.log(month)
+      window.location.replace("/login");
+
     })
     .catch(function(err){
       console.log(err);
