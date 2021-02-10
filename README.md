@@ -19,7 +19,7 @@ This project required designing and building a full-stack web application with M
   npm start
   
   A sample Photo of the application can be seen here:
-      [Sample inRhYTHM app Screenshot](./public/assets/img/landing.png) 
+      [Sample inRHYTHM app Screenshot](./public/assets/img/landing.png) 
  
   Live deployed link here:    
       [inRHYTHM Heroku Link](https://guarded-cliffs-86649.herokuapp.com/)
