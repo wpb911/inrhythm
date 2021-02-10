@@ -24,11 +24,8 @@ This project required designing and building a full-stack web application with M
   A sample photo of the application can be seen here:
       [Sample inRHYTHM app Screenshot](./public/assets/img/landing.png) 
  
-  Live deployed link here:    
-
-
-      [inRHYTHM Heroku Link](https://guarded-cliffs-86649.herokuapp.com/)
-
+  Live deployed link here:
+    [inRHYTHM Heroku Link](https://guarded-cliffs-86649.herokuapp.com/)
 
   ## Questions
   GitHub profiles: 
