@@ -1,21 +1,19 @@
 //  labels along the x-axis
 
 $(document).ready(function(){
-  var day;
-  var month;
-  var year;
-  
+
   $.get("/api/user_data").then(function (data) {
     console.log(data);
-    day = data.day;
-    month = data.month;
-    year = data.year;
-    console.log(day)
-    console.log(month)
-    console.log(year)
-    let readdate=day+ "." +month + "." + year;
-    // let readdate = "10.12.1992"
-    let bdateFromForm = moment(readdate, "DD.MM.YYYY");
+    const {physical, emotional, intellectual } = data;
+    // day = data.day;
+    // month = data.month;
+    // year = data.year;
+    // console.log(day)
+    // console.log(month)
+    // console.log(year)
+    // let readdate=day+ "." +month + "." + year;
+    // // let readdate = "10.12.1992"
+    // let bdateFromForm = moment(readdate, "DD.MM.YYYY");
     
     //let phyPrt = phyCalc(bdateFromForm, 7, 74, 91, -28 );
     
@@ -28,30 +26,30 @@ $(document).ready(function(){
     // let bdateFromForm = moment(readdate, "DD.MM.YYYY");
     
     // For drawing the lines
-    var physical = 
-      ['-94', '-100', '-98', '-89', '-73', '-52',
-      '-27',   '-0',  '27',  '52',  '73',  '89',
-       '98',  '100',  '94',  '82',  '63',  '40',
-       '14',  '-14', '-40', '-63', '-82', '-94',
-     '-100',  '-98', '-89', '-73'];
+    // var physical = 
+    //   ['-94', '-100', '-98', '-89', '-73', '-52',
+    //   '-27',   '-0',  '27',  '52',  '73',  '89',
+    //    '98',  '100',  '94',  '82',  '63',  '40',
+    //    '14',  '-14', '-40', '-63', '-82', '-94',
+    //  '-100',  '-98', '-89', '-73'];
       //phyCalc(bdateFromForm, 30, 74, 91, -28);
     console.log(`Physical: ${physical}`);
     //[0.24, 0.17, -0.55, 0.84, -0.98, 0.98, 0.71];
-    var emotional = 
-      ['-43', '-62', '-78', '-90', '-97', '-100',
-      '-97', '-90', '-78', '-62', '-43', '-22',
-      '-0', '22', '43', '62', '78', '90',
-      '97', '100', '97', '90', '78', '62',
-      '43', '22', '-0', '-22'];
+    // var emotional = 
+    //   ['-43', '-62', '-78', '-90', '-97', '-100',
+    //   '-97', '-90', '-78', '-62', '-43', '-22',
+    //   '-0', '22', '43', '62', '78', '90',
+    //   '97', '100', '97', '90', '78', '62',
+    //   '43', '22', '-0', '-22'];
       //emoCalc(bdateFromForm, 30, 74, 91, -28);
     console.log(`Emotional: ${emotional}`);
     //[0.97, -0.38, -0.49, 0.98, -0.73, -0.08, 0.84];
-    var intellectual = 
-      ['100', '99', '95', '87', '76', '62',
-      '46', '28', '10', '-10', '-28', '-46',
-      '-62', '-76', '-87', '-95', '-99', '-100',
-      '-97', '-91', '-81', '-69', '-54', '-37',
-      '-19', '0', '19', '37'];
+    // var intellectual = 
+    //   ['100', '99', '95', '87', '76', '62',
+    //   '46', '28', '10', '-10', '-28', '-46',
+    //   '-62', '-76', '-87', '-95', '-99', '-100',
+    //   '-97', '-91', '-81', '-69', '-54', '-37',
+    //   '-19', '0', '19', '37'];
       //intCalc(bdateFromForm, 30, 74, 91, -28);
     console.log(`Intellectual: ${intellectual}`);
     //[-0.44, -0.71, 0.90, 0.13, -0.98, 0.51, 0.63];
