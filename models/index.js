@@ -9,13 +9,13 @@ const env = process.env.NODE_ENV || "development";
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
-// console.log(`Use env = ${env}`);
+// console.log;
 console.log(`Use environ = ${config.use_env_variable}`);
 // console.log(`MY environ = ${config.my}`);
 
 let sequelize;
 if (process.env.JAWSDB_URL) {
-  sequelize = new Sequelize(process.env[process.env.JAWSDB_URL], config);
+  sequelize = new Sequelize(process.env.JAWSDB_URL, config);
 } else {
   console.log(`No environ  `);
   //sequelize = new Sequelize(config.database, config.username, config.password, config);
