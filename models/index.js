@@ -14,10 +14,10 @@ console.log(`Use environ = ${config.use_env_variable}`);
 // console.log(`MY environ = ${config.my}`);
 
 let sequelize;
-if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
+if (process.env.JAWSDB_URL) {
+  sequelize = new Sequelize(process.env[process.env.JAWSDB_URL], config);
 } else {
-  console.log(`No environ variable `);
+  console.log(`No environ  `);
   //sequelize = new Sequelize(config.database, config.username, config.password, config);
   sequelize = new Sequelize(process.env.DB_DATABASE, process.env.DB_USERNAME, process.env.DB_PASSWORD, config);
 }
