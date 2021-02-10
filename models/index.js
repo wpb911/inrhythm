@@ -17,7 +17,7 @@ let sequelize;
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env[process.env.JAWSDB_URL], config);
 } else {
-  console.log(`No environ variable `);
+  console.log(`No environ  `);
   //sequelize = new Sequelize(config.database, config.username, config.password, config);
   sequelize = new Sequelize(process.env.DB_DATABASE, process.env.DB_USERNAME, process.env.DB_PASSWORD, config);
 }
