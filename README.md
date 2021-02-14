@@ -2,8 +2,7 @@
 
 
 ## Description
-
-This project required designing and building a full-stack web application with MySQL, Node, Express, Handlebars and Sequelize. We followed the MVC design pattern using Node and MySQL to query and route data in the app. Handlebars was used to generate the HTML. Travis CI was used to configure linting and for continuous integration. The project was then loaded to heroku for use with the JawsDB MySQL add-on as the database. 
+inRHYTHM is a biorhythm calculating and reporting program that graphically displays the current status of the users biorhythm and the next month of data points to allow for future planning based on the predicted data. This project required designing and building a full-stack web application with MySQL, Node, Express, Handlebars and Sequelize. We followed the MVC design pattern using Node and MySQL to query and route data in the app. Handlebars was used to generate the HTML. Travis CI was used to configure linting and for continuous integration. The project was then loaded to heroku for use with the JawsDB MySQL add-on as the database. 
 
 
 ## Table of Contents
